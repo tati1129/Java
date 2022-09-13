@@ -8,7 +8,7 @@ public class Main {
 */
         String str = "Java is a very popular language";
         int startIndex = 5;
-        int endIndex = 30;
+        int endIndex = 5;
 
         String newStr = "";
 
