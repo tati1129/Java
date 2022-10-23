@@ -1,0 +1,65 @@
+public class Main {
+    public static void main(String[] args) {
+
+    printNumbers(10);
+        System.out.println(sumN(5));
+        System.out.println("---------------------");
+        printsTriangle(6);
+        System.out.println("---------------------");
+        printsTriangleEqualString(6);
+        System.out.println("----------------------");
+        System.out.println(firstTwoLetters("Hello"));
+        System.out.println(capitalLetters("Hello"));
+    }
+    public static void printNumbers(int n){
+        for (int i = 1; i <=n; i++) {
+            System.out.print(i+" ");
+        }
+        System.out.println();
+    }
+   /*Вывести на экран треугольник состоящий из цифр от 1 до числа n
+    1
+    12
+    123
+    1234
+    12345
+    */
+    public static void printsTriangle(int n){
+        for (int i = 1; i <=n; i++) {
+            for (int j = 1; j <=i; j++) {
+                System.out.print(j);
+            }
+            System.out.println();
+        }
+    }
+    /*Вывести на экран треугольник состоящий из цифр от 1 до числа n
+    1
+    22
+    333
+    */
+    public static void printsTriangleEqualString(int n){
+        for (int i = 1; i <=n; i++) {
+            for (int j = 1; j <=i; j++) { //выполняется внутр цикл пока j<=i
+                System.out.print(i);
+            }
+            System.out.println();
+        }
+    }
+     //Написать метод, возвращающий первые два символа строки (Hello-> He)
+    public static String firstTwoLetters(String string){
+        return string.substring(0, 2);
+
+    }
+    //Написать метод, возвращающий второй и третий символы строки заглавными буквами (hello -> EL)
+    public static String capitalLetters(String string){
+        return string.substring(1, 3).toUpperCase();
+    }
+
+    public static int sumN (int n){
+        int sum=0;
+        for (int i=1; i <=n; i++) {
+            sum+=i;
+        }
+        return sum;
+    }
+}

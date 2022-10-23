@@ -1,0 +1,52 @@
+public class Main {
+    public static void main(String[] args) {
+        /*1.Реализовать метод, который создает и заполняет массив числами int в диапазоне от minValue до maxValue*/
+        /*2.Дан массив int. Реализовать метод, который считает сумму положительных  элементов массива.
+      {3, 2, -1, 5, -3} ->10*/
+
+
+        //int[] arr = {3, 2, -1, 5, -3};
+        //System.out.println("Сумма положительных eлементов маccива : " + getSumArray(arr));
+
+
+        int[]arr = getIntArray(2,8);
+        for (int i = 0; i < arr.length; i++) {
+            System.out.println("arr[ " + i + " ]= " + arr[i]);
+        }
+        }
+    public static int[] getIntArray(int minValue, int maxValue){
+
+        int[] result=new int[maxValue-minValue];// узнаем длину массива-(отнимаем от макс минимальн число)
+        int index=0;
+        for (int i = minValue; i < maxValue ; i++) {
+            result[index]=i;
+            index+=1;
+        }
+        return result;
+    }
+
+    public static int[] getIntArray2(int minValue, int maxValue){
+
+        int[] result=new int[maxValue-minValue];// узнаем длину массива-(отнимаем от макс минимальн число)
+        int index=0;
+        for (int i = minValue; i < maxValue ; i++) {
+            result[index]=1;
+            index+=1;
+        }
+        return result;
+    }
+
+    public static long getSumArray(int[] arr) {
+
+        long sum = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] > 0) {
+                sum += arr[i];
+
+                //sum =(arr[i]>0)? sum+arr[i] : sum+0; тернарный оператор
+            }
+
+        }
+        return sum;
+    }
+}
